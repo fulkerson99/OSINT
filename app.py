@@ -80,5 +80,15 @@ def instagram_intelligence_report():
     else:
         return 'No user entered!'
 
+
+@app.route('/twitter_report' , methods=['GET','POST'])
+def twitter_report():
+    username = request.form['twitteruser']
+    if username:
+        return "hello"
+    else:
+        return render_template("error.html")
+
+
 if __name__ == '__main__':
     app.run()
