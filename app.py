@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 app = Flask(__name__)
 
 
@@ -8,7 +8,8 @@ def main():
 
 @app.route('/instagram_intelligence_report' , methods=['GET','POST'])
 def instagram_intelligence_report():
-    return render_template("instagram_intelligence.html")
+    iguser = request.form['iguser']
+    return render_template("instagram_intelligence.html", iguser=iguser)
 
 
 

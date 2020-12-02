@@ -56,22 +56,21 @@
                             <span><img src="https://cdn1.iconfinder.com/data/icons/social-media-outline-6/128/SocialMedia_Instagram-Outline-512.png" width="50px" height="50px" style="margin-bottom: 10px;margin-right: 10px;"><b>Instagram</b></span>
                         </a>
                         <hr />
-                        <div class="row">
+                        <div class="row text-dark">
 
                             <div class="col">
-                                <form method="POST">
-                                    <input name="text">
-                                    <input type="submit">
-                                </form>
+                                <form method="post" action="/instagram_intelligence_report">
+                                    <div class="form-group">
+                                      <label for="exampleInputEmail1">Username</label>
+                                      <input type="text" class="form-control" name="iguser" placeholder="Enter username">
+                                    </div>
+                                    
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                  </form>
                                 
                             </div>
     
-                            <div class="col">
-                                <a class="btn-lg btn btn-primary" href="/instagram_intelligence_report" >Generate Intelligence Report </a>                              
-                            </div>
-                            <div class="col">
-                                <a class="btn-lg btn btn-primary" id="IGcollectData">Generate Data Collection</a>
-                            </div>
+                            
                             </div>    
 
                     </div>
