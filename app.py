@@ -54,7 +54,7 @@ def instagram_intelligence_report():
             # Works!
         except:
             # ADD TEMPLATE HERE
-            print("fail")
+            return render_template("error.html")
         
         profile_name = profile_meta['entry_data']['ProfilePage'][0]['graphql']['user']['username']
         profile_url = description['mainEntityofPage']['@id']
