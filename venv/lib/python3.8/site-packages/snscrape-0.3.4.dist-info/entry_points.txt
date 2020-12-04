@@ -1,0 +1,3 @@
+[console_scripts]
+snscrape = snscrape.cli:main
+

@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: snscrape
+Version: 0.3.4
+Summary: A social networking service scraper
+Home-page: https://github.com/JustAnotherArchivist/snscrape
+Author: JustAnotherArchivist
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: requests[socks]
+Requires-Dist: lxml
+Requires-Dist: beautifulsoup4
+
+UNKNOWN
+
+

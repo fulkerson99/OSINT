@@ -1,17 +1,12 @@
 from flask import Flask, render_template, request
 from bs4 import BeautifulSoup
 import json
-import os
-import requests
-import random
-import string
-import sys
-import time
-import html
 
-import twint
+
+import stweet as st
 from igramscraper.instagram import Instagram
-from twitter_scraper import Profile
+import twint
+
 
 
 app = Flask(__name__)
@@ -49,10 +44,16 @@ def instagram_intelligence_report():
 def twitter_report():
     username = request.form['twitteruser']
     if username:
-        profile = Profile(f"{username}")
-        return print(profile.to_dict())
+        # Configure
+        search_tweets_task = st.SearchTweetsTask(all_words='#covid19' ,tweets_count=20)
+        tweets_collector = st.CollectorTweetOutput()
+        st.TweetSearchRunner(search_tweets_task=search_tweets_task,tweet_outputs=[tweets_collector, st.CsvTweetOutput('output_file.csv')]).run()
+
+        tweets = tweets_collector.get_scrapped_tweets()
         
-        
+        return render_template("tweets.html", tweets=tweets, username=username)
+
+
     else:
         return render_template("error.html")
 
